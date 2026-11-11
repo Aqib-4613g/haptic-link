@@ -1,0 +1,25 @@
+.stepper{display:flex;flex-wrap:wrap;gap:6px;list-style:none;margin:20px 0 0;padding:0}
+.stepper button{min-height:40px;padding:0 12px;border:1px solid var(--line);border-radius:999px;background:transparent;color:#9aa5a9;font:500 12px var(--mono);cursor:pointer}
+.stepper button.cur{color:var(--accent);border-color:rgba(215,255,88,.4);background:rgba(215,255,88,.05)}.stepper button.done{color:var(--text)}.stepper button:disabled{opacity:.4;cursor:default}
+.lcards{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:10px;margin-top:6px}
+.lcard{display:flex;flex-direction:column;align-items:flex-start;gap:14px;padding:16px;min-height:88px;border:1px solid var(--line-soft);border-radius:10px;background:#101416;color:var(--text);cursor:pointer;text-align:left;transition:border-color .25s var(--ease)}
+.lcard:hover{border-color:#566066}.lcard strong{font:600 20px var(--mono)}.lpat,.lpw{display:flex;flex-wrap:wrap;gap:6px 12px}
+.lesson-path{list-style:none;margin:20px 0 0;padding:0}.lesson-path .path-item{width:100%;min-height:48px;background:none;border:0;border-top:1px solid var(--line-soft);color:var(--text);text-align:left;font:inherit;align-items:center}
+.lesson-path .path-item:disabled{opacity:.55;cursor:not-allowed}.path-item small{display:block;margin-top:3px;color:#9aa5a9;font:11px var(--mono)}.path-item.current strong{color:var(--accent)}
+.path-item strong{font-size:13px}.stats-row span,.result-grid span,.progress-top,.progress-meta,.challenge-score small,.lesson-badge{font-size:11px;color:#9aa5a9}
+.answer-grid{grid-template-columns:repeat(auto-fit,minmax(130px,1fr))}.answer-btn{position:relative;min-height:64px;font-size:20px}.akey{position:absolute;left:8px;top:6px;font:11px var(--mono);color:#7b868b}
+.answer-btn small{display:inline;margin-left:8px;font-size:14px;color:inherit}.answer-btn:disabled{opacity:.5;cursor:default}.answer-btn.correct:disabled,.answer-btn.wrong:disabled{opacity:1}
+.signal-stage::before{display:none}.signal-orb{width:26px;height:26px;transition:transform .08s,background .08s,box-shadow .08s}.signal-label{font-size:12px;color:#9aa5a9}
+.timebar{position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--accent);transform-origin:left;animation:tb linear forwards;animation-duration:var(--d)!important}
+@keyframes tb{to{transform:scaleX(0)}}
+.shake{animation:shake .32s var(--ease)}@keyframes shake{25%{transform:translateX(-5px)}60%{transform:translateX(4px)}}
+.rg4{grid-template-columns:repeat(4,1fr)}.results-card .lesson-actions{flex-wrap:wrap;align-items:center}
+.learn-hero{margin-bottom:28px}
+@media(max-width:620px){.rg4{grid-template-columns:repeat(2,1fr)}.rg4 div:nth-child(2){border-right:0}.rg4 div:nth-child(-n+2){border-bottom:1px solid var(--line)}.lesson-actions .send-btn,.lesson-actions .mini-btn{width:100%}}
+@media(prefers-reduced-motion:reduce){.shake{animation:none!important}.answer-btn.wrong{outline:2px solid var(--danger)}}
+/* Pattern cards: compact blocks so the longest letters (O, 0) never overflow a card */
+.lcard{min-width:0;overflow:hidden}.lcard .pb.dot{width:12px;height:12px}.lcard .pb.dash{width:30px;height:12px}.lcard .pchar{gap:5px}.lcard .lpat,.lcard .lpw{gap:5px 10px}
+.feel{display:flex;flex-wrap:wrap;gap:8px}.feel-row{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:16px}
+.chip{min-height:40px;padding:0 14px;border:1px solid var(--line);border-radius:999px;background:transparent;color:#9aa5a9;font:500 12px var(--mono);cursor:pointer}
+.chip[aria-pressed=true]{color:var(--accent);border-color:rgba(215,255,88,.4);background:rgba(215,255,88,.05)}
+.modal-feel{flex:none;padding:10px 26px 0}
