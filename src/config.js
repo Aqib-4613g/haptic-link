@@ -8,9 +8,9 @@
 //  NOTE: this file ends up inside the public website, so anyone can read it.
 //  Use a dedicated "website" credential here - never reuse a personal password.
 export const LIVE = {
-  host: 'YOUR-ADDRESS.emqxsl.com',             // the 'Address' shown on the EMQX deployment Overview page
+  host: 'i2127d2f.ala.asia-southeast1.emqxsl.com',             // the 'Address' shown on the EMQX deployment Overview page
   wsPort: 8084,                                // EMQX Serverless secure WebSocket (wss) port
-  username: 'YOUR-WEBSITE-USERNAME',
-  password: 'YOUR-WEBSITE-PASSWORD',
+  username: 'website',
+  password: 'wV8vTfFk5G37GkM',
   deviceCode: 'hl-j8jqso688s',                 // secret-ish code that pairs site <-> wearable
 };
